@@ -1,0 +1,67 @@
+.container {
+    margin: auto auto;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    place-content: center;
+    text-align: center;
+    overflow-y: hidden;
+    overflow-x: hidden;
+    img {
+        height: 8vh;
+    }
+
+    h1 {
+        background: linear-gradient(90deg, #039FFF 0%,#AC08FF 100%);
+        background-clip: text;
+        color: transparent;
+        font-size: 1.2em;
+        font-weight: bold;
+        text-transform: uppercase;
+        margin-bottom: 2rem;
+    }
+
+    .row {
+        margin: 0 auto;
+        display: flex;
+        align-items: center;
+    }
+    > p {
+        font-size: .8em;
+        margin-top: 3rem;
+        color: black;
+        a {
+            font-size: .8em;
+            text-decoration: none;
+            color: #039FFF;
+        }
+    }
+
+    
+}
+
+// form {
+//     display: flex;
+//     flex-direction: column;
+//     justify-content: center;
+    
+//     a {
+//         color: gray;
+//         font-size: .8em;
+//         margin: -2.5rem 0 1.5rem auto;
+//         text-decoration: none;
+//     }
+
+//     button {
+//         background: linear-gradient(90deg, #039FFF 0%,#AC08FF 100%);
+//         color: white;
+//         border-radius: 50px;
+//         padding: .3rem 0;
+//         box-shadow: 1px 1px 5px gray;
+//         transition: background .6s ease-in; 
+//     }
+
+//     button:disabled {
+//         background: rgb(224, 224, 224);
+//     }
+// }

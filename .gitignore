@@ -1,4 +1,11 @@
 # Specifies intentionally untracked files to ignore when using Git
+
+# custom
+
+/android
+/e2e
+/app-finale.apk
+
 # http://git-scm.com/docs/gitignore
 
 *~

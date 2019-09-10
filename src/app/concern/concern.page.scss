@@ -1,0 +1,28 @@
+.row {
+    display: flex;
+    align-items: center;
+}
+
+.container {
+    display: flex;
+    place-content: center;
+    flex-wrap: wrap;
+    margin: 5vh 5vw;
+    .card {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        cursor: pointer;
+        user-select: none;
+        align-items: center;
+        background: white;
+        border-radius: 10px;
+        box-shadow: 1px 1px 10px gray;
+        width: 120px;
+        height: 150px;
+        margin: 5px;
+        img {
+            width: 70px;
+        }
+    }
+}

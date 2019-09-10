@@ -1,5 +1,5 @@
 <ion-app>
-  <ion-split-pane>
+  <ion-split-pane [@routeAnimations]="prepareRoute(outlet)">
     <ion-menu type="overlay">
       <ion-header>
         <ion-toolbar>
@@ -12,13 +12,13 @@
             <ion-item [routerDirection]="'root'" [routerLink]="[p.url]">
               <ion-icon slot="start" [name]="p.icon"></ion-icon>
               <ion-label>
-                {{p.title}}
+                {{p.title}} {{plateform}}
               </ion-label>
             </ion-item>
           </ion-menu-toggle>
         </ion-list>
       </ion-content>
     </ion-menu>
-    <ion-router-outlet main></ion-router-outlet>
+    <ion-router-outlet main #outlet="outlet"></ion-router-outlet>
   </ion-split-pane>
 </ion-app>

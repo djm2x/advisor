@@ -1,0 +1,23 @@
+<ion-header>
+  <ion-toolbar>
+    <div class="row">
+      <ion-title>concern</ion-title>
+      <button mat-icon-button (click)="exit()">
+        <mat-icon>power_settings_new</mat-icon>
+      </button>
+    </div>
+  </ion-toolbar>
+</ion-header>
+<div class="container" @anime>
+  <div *ngFor="let o of list; let i=index">
+    <section matRipple class="card" [routerLink]="['/form', i]">
+      <img [src]="o.icon" alt="">
+      <p>{{o.title}}</p>
+    </section>
+  </div>
+  
+</div>
+
+<ion-content>
+
+</ion-content>

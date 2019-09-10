@@ -1,0 +1,41 @@
+<!-- <ion-header>
+  <ion-toolbar>
+    <ion-title>login</ion-title>
+  </ion-toolbar>
+</ion-header> -->
+
+<ion-content>
+  <div class="container">
+
+    <img @logo src="../../assets/advisor.svg" alt="">
+    <h1>Advisors</h1>
+    <div class="row">
+      <mat-form-field @input>
+        <input matInput [formControl]="email" placeholder="Email to send you a code" type="text">
+        <mat-error *ngIf="email.invalid">{{emailError}}</mat-error>
+      </mat-form-field>
+      <button @logo mat-icon-button (click)="submitEmail(email.value)" [disabled]="email.invalid">
+        <mat-icon>email</mat-icon>
+      </button>
+    </div>
+    <div class="row">
+      <mat-form-field @input>
+        <input matInput [formControl]="code" placeholder="Code in your email" type="text">
+        <mat-error *ngIf="code.invalid">{{codeError}}</mat-error>
+      </mat-form-field>
+      <button @logo mat-icon-button (click)="submitCode(code.value)" [disabled]="code.invalid">
+        <mat-icon>vpn_key</mat-icon>
+      </button>
+    </div>
+    <div class="row">
+      <mat-form-field @input>
+        <input matInput [formControl]="password" placeholder="New password" type="text">
+        <mat-error *ngIf="password.invalid">{{passwordError}}</mat-error>
+      </mat-form-field>
+      <button @logo mat-icon-button (click)="submitPassword(password.value)" [disabled]="password.invalid">
+        <mat-icon>done</mat-icon>
+      </button>
+    </div>
+    <p @items>don't have an account? <a [routerLink]="['/signup']">Sign up!</a></p>
+  </div>
+</ion-content>

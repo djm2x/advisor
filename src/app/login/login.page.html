@@ -1,0 +1,31 @@
+<!-- <ion-header>
+  <ion-toolbar>
+    <ion-title>login</ion-title>
+  </ion-toolbar>
+</ion-header> -->
+
+<ion-content>
+  <div class="container">
+
+    <img @logo src="../../assets/advisor.svg" alt="">
+    <h1>Advisor</h1>
+    <form [formGroup]="myForm">
+      <mat-form-field @input>
+        <input matInput formControlName="email" placeholder="Email" type="text">
+        <mat-error *ngIf="email.invalid">{{emailError}}</mat-error>
+      </mat-form-field>
+      <mat-form-field @input>
+        <input matInput formControlName="password" placeholder="Password" type="text">
+        <mat-error *ngIf="password.invalid">{{passwordError}}</mat-error>
+      </mat-form-field>
+      <div class="row">
+        <mat-checkbox [formControl]="checkbox" labelPosition="before">
+          remember me!
+        </mat-checkbox>
+        <a [routerLink]="['/forget']">forgot your password?</a>
+      </div>
+      <button @logo mat-button (click)="submit(myForm.value)" [disabled]="myForm.invalid">Login</button>
+    </form>
+    <p @items>don't have an account? <a [routerLink]="['/signup']">Sign up!</a></p>
+  </div>
+</ion-content>

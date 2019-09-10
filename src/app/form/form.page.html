@@ -1,0 +1,34 @@
+<ion-header>
+  <ion-toolbar>
+    <div class="row">
+      <ion-title>form {{title}}</ion-title>
+      <button mat-icon-button [routerLink]="['/concern']">
+        <mat-icon>arrow_back</mat-icon>
+      </button>
+    </div>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div class="container">
+
+    <!-- <img @logo src="../../assets/advisor.svg" alt=""> -->
+    <h1>Advisor</h1>
+    <form [formGroup]="myForm">
+      <mat-form-field @input>
+        <textarea matInput formControlName="question" placeholder="Leave a question"></textarea>
+      </mat-form-field>
+      <mat-form-field @input>
+        <input matInput formControlName="fullName" placeholder="fullName" readonly>
+      </mat-form-field>
+      <mat-form-field @input>
+        <input matInput formControlName="tel" placeholder="tel" readonly>
+      </mat-form-field>
+      <mat-form-field @input>
+        <input matInput formControlName="email" placeholder="Email" readonly>
+      </mat-form-field>
+      <p></p>
+      <button @logo mat-button (click)="submit(myForm.value)" [disabled]="myForm.invalid">Send</button>
+    </form>
+  </div>
+</ion-content>

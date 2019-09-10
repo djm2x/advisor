@@ -1,0 +1,29 @@
+import { NgModule } from '@angular/core';
+import { CommonModule } from '@angular/common';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { Routes, RouterModule } from '@angular/router';
+
+import { IonicModule } from '@ionic/angular';
+
+import { SignupPage } from './signup.page';
+import { MatModule } from '../mat.module';
+
+const routes: Routes = [
+  {
+    path: '',
+    component: SignupPage
+  }
+];
+
+@NgModule({
+  imports: [
+    CommonModule,
+    FormsModule,
+    IonicModule,
+    ReactiveFormsModule,
+    MatModule,
+    RouterModule.forChild(routes)
+  ],
+  declarations: [SignupPage]
+})
+export class SignupPageModule {}

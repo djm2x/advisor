@@ -1,0 +1,35 @@
+<!-- <ion-header>
+  <ion-toolbar>
+    <ion-title>login</ion-title>
+  </ion-toolbar>
+</ion-header> -->
+
+<ion-content>
+  <div class="container">
+
+    <img @logo src="../../assets/advisor.svg" alt="">
+    <h1>Advisor</h1>
+    <form [formGroup]="myForm">
+      <mat-form-field @input>
+        <input matInput formControlName="firstname" placeholder="firstname" type="text">
+      </mat-form-field>
+      <mat-form-field @input>
+        <input matInput formControlName="lastname" placeholder="lastname" type="text">
+      </mat-form-field>
+      <mat-form-field @input>
+        <input matInput formControlName="tel" placeholder="tel" type="text">
+      </mat-form-field>
+      <mat-form-field @input>
+        <input matInput formControlName="email" placeholder="Email" type="text">
+        <mat-error *ngIf="email.invalid">{{emailError}}</mat-error>
+      </mat-form-field>
+      <mat-form-field @input>
+        <input matInput formControlName="password" placeholder="Password" type="text">
+        <mat-error *ngIf="password.invalid">{{passwordError}}</mat-error>
+      </mat-form-field>
+      <p></p>
+      <button @logo mat-button (click)="submit(myForm.value)" [disabled]="myForm.invalid">Sign up</button>
+    </form>
+    <p>Im already a member <a [routerLink]="['/login']">Login!</a></p>
+  </div>
+</ion-content>
